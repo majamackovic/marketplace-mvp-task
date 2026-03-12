@@ -33,89 +33,6 @@
   ],
   "fileMap": {
     "projectFileMap": {
-      "api-e2e": [
-        {
-          "file": "apps/api-e2e/eslint.config.mjs",
-          "hash": "2624537849564014525"
-        },
-        {
-          "file": "apps/api-e2e/jest.config.cts",
-          "hash": "16237957319090451515"
-        },
-        {
-          "file": "apps/api-e2e/project.json",
-          "hash": "5454625364222936016"
-        },
-        {
-          "file": "apps/api-e2e/src/api/api.spec.ts",
-          "hash": "110394728024017389",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/api-e2e/src/support/global-setup.ts",
-          "hash": "10817858795115919263",
-          "deps": [
-            "npm:@nx/node"
-          ]
-        },
-        {
-          "file": "apps/api-e2e/src/support/global-teardown.ts",
-          "hash": "14210317125869451873",
-          "deps": [
-            "npm:@nx/node"
-          ]
-        },
-        {
-          "file": "apps/api-e2e/src/support/test-setup.ts",
-          "hash": "15521797170623961900",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/api-e2e/tsconfig.json",
-          "hash": "15443990093475294480"
-        },
-        {
-          "file": "apps/api-e2e/tsconfig.spec.json",
-          "hash": "14954872453723519891"
-        }
-      ],
-      "frontend-e2e": [
-        {
-          "file": "apps/frontend-e2e/eslint.config.mjs",
-          "hash": "1172734138943286526",
-          "deps": [
-            "npm:eslint-plugin-playwright"
-          ]
-        },
-        {
-          "file": "apps/frontend-e2e/playwright.config.ts",
-          "hash": "4535250053304126287",
-          "deps": [
-            "npm:@playwright/test",
-            "npm:@nx/playwright",
-            "npm:@nx/devkit"
-          ]
-        },
-        {
-          "file": "apps/frontend-e2e/project.json",
-          "hash": "2827390866139710423"
-        },
-        {
-          "file": "apps/frontend-e2e/src/example.spec.ts",
-          "hash": "16019101014373124625",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/frontend-e2e/tsconfig.json",
-          "hash": "15726545290547512047"
-        }
-      ],
       "api": [
         {
           "file": "apps/api/eslint.config.mjs",
@@ -172,7 +89,7 @@
         },
         {
           "file": "apps/api/src/app/app.module.ts",
-          "hash": "17092711312169589868",
+          "hash": "10917800273948143256",
           "deps": [
             "npm:@nestjs/common"
           ]
@@ -182,6 +99,29 @@
           "hash": "2920303273157247352",
           "deps": [
             "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/categories/categories.controller.ts",
+          "hash": "10642936420146239316",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@prisma/client"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/categories/categories.module.ts",
+          "hash": "6350178436343000219",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/categories/categories.service.ts",
+          "hash": "9866257875039439672",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@prisma/client"
           ]
         },
         {
@@ -267,7 +207,7 @@
         },
         {
           "file": "apps/frontend/src/app/app.html",
-          "hash": "11987652264972370457"
+          "hash": "17816966185630879015"
         },
         {
           "file": "apps/frontend/src/app/app.routes.ts",
@@ -290,9 +230,19 @@
         },
         {
           "file": "apps/frontend/src/app/clients/ads.client.ts",
-          "hash": "12320211011419926459",
+          "hash": "2715551978460683032",
           "deps": [
             "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/app/clients/categories.client.ts",
+          "hash": "12553645352511285851",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
             "npm:rxjs"
           ]
         },
@@ -306,11 +256,11 @@
         },
         {
           "file": "apps/frontend/src/app/features/ads/ads-list.component.html",
-          "hash": "11874911219877299450"
+          "hash": "8896361269029544268"
         },
         {
           "file": "apps/frontend/src/app/features/ads/ads-list.component.ts",
-          "hash": "3740831588873806582",
+          "hash": "16303052582506525584",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -318,10 +268,9 @@
         },
         {
           "file": "apps/frontend/src/app/features/ads/ads.service.ts",
-          "hash": "7522993248855793827",
+          "hash": "5934097405729798247",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common",
             "npm:rxjs"
           ]
         },
@@ -362,6 +311,89 @@
         {
           "file": "apps/frontend/tsconfig.json",
           "hash": "4516499123136711707"
+        }
+      ],
+      "api-e2e": [
+        {
+          "file": "apps/api-e2e/eslint.config.mjs",
+          "hash": "2624537849564014525"
+        },
+        {
+          "file": "apps/api-e2e/jest.config.cts",
+          "hash": "16237957319090451515"
+        },
+        {
+          "file": "apps/api-e2e/project.json",
+          "hash": "5454625364222936016"
+        },
+        {
+          "file": "apps/api-e2e/src/api/api.spec.ts",
+          "hash": "110394728024017389",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/api-e2e/src/support/global-setup.ts",
+          "hash": "10817858795115919263",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "apps/api-e2e/src/support/global-teardown.ts",
+          "hash": "14210317125869451873",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "apps/api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/api-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/api-e2e/tsconfig.spec.json",
+          "hash": "14954872453723519891"
+        }
+      ],
+      "frontend-e2e": [
+        {
+          "file": "apps/frontend-e2e/eslint.config.mjs",
+          "hash": "1172734138943286526",
+          "deps": [
+            "npm:eslint-plugin-playwright"
+          ]
+        },
+        {
+          "file": "apps/frontend-e2e/playwright.config.ts",
+          "hash": "4535250053304126287",
+          "deps": [
+            "npm:@playwright/test",
+            "npm:@nx/playwright",
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "apps/frontend-e2e/project.json",
+          "hash": "2827390866139710423"
+        },
+        {
+          "file": "apps/frontend-e2e/src/example.spec.ts",
+          "hash": "16019101014373124625",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/frontend-e2e/tsconfig.json",
+          "hash": "15726545290547512047"
         }
       ]
     },
@@ -468,7 +500,7 @@
       },
       {
         "file": "README.md",
-        "hash": "17272086772692509411"
+        "hash": "15555007637941276226"
       },
       {
         "file": "docker-compose.yaml",

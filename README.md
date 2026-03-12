@@ -23,11 +23,18 @@ To build a functional MVP (Minimum Viable Product) of a marketplace platform ins
 - [ x ] defining Prisma schema with MVP tables (Ads, Categories, Users, Images)
 - [ x ] Seeding database with realistic data for development and testing
 
-## Notes about this phase
+- Phase 2: Backend Core (NestJS & Prisma)
+- [ x ] Created AdsModule with full CRUD functionality
+- [ x ] Implemented CreateAdDto and UpdateAdDto for request validation
+- [ x ] Integrated class-validator and class-transformer for robust data handling
+- [ x ] Resolved database connectivity issues with @prisma/adapter-pg
+- [ x ] Enabled CORS for frontend-to-backend communication
+- [ x ] Implemented CategoriesModule (Read-only) for ad categorization
 
-## Problem with prisma, it is generated in a new /generated folder instead of in @node_modules. Fixed by remowing from schema.prisma the output parameter
-
-## Creating a seeder, and then executing it. Error because of the new version of Prisma - 7 no longer exposes your generated client directly from @prisma/client, which is why the old import { PrismaClient } from '@prisma/client' broke. Switched the seed script to import PrismaClient from the generated client in node_modules/.prisma/client and construct it with the required PrismaPg adapter plus DATABASE_URL, so the code now compiles and runs
-
-- Phase 2: Backend integration
--
+- Phase 3: Frontend Foundation (Angular & Tailwind)
+- [ x ] Integrated Tailwind CSS for modern and responsive UI
+- [ x ] Configured HttpClient and global app providers
+- [ x ] Created shared AdsClient for API communication
+- [ x ] Implemented AdsListComponent using Angular Signals
+- [ x ] Developed AdsService with RxJS-to-Signal interop (toSignal)
+- [ x ] Built responsive Grid UI for ad listings using modern @for and @if syntax
