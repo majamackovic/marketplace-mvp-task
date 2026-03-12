@@ -15,17 +15,4 @@ export class AppController {
   getHello() {
     return { message: 'Hello from NestJS' };
   }
-
-  @Get('projects')
-  getAllProjects() {
-    return this.appService.getAllProjects();
-  }
-
-  @Post('projects')
-  createProject(@Body() body: CreateProjectDto) {
-    return this.appService.createProject({
-      title: body.title,
-      description: body.description,
-    });
-  }
 }

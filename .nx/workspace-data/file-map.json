@@ -32,416 +32,6 @@
     }
   ],
   "fileMap": {
-    "nonProjectFiles": [
-      {
-        "file": ".github/skills/nx-workspace/SKILL.md",
-        "hash": "14445122489349943565"
-      },
-      {
-        "file": ".gemini/skills/monitor-ci/references/fix-flows.md",
-        "hash": "14499115380699629375"
-      },
-      {
-        "file": ".opencode/skills/monitor-ci/SKILL.md",
-        "hash": "11715232867929533564"
-      },
-      {
-        "file": ".opencode/skills/nx-import/references/NEXT.md",
-        "hash": "2570972841475183216"
-      },
-      {
-        "file": ".gemini/skills/nx-import/references/GRADLE.md",
-        "hash": "15868511153961490698"
-      },
-      {
-        "file": ".opencode/skills/monitor-ci/scripts/ci-poll-decide.mjs",
-        "hash": "8235481637071944834"
-      },
-      {
-        "file": ".github/skills/monitor-ci/references/fix-flows.md",
-        "hash": "14499115380699629375"
-      },
-      {
-        "file": ".gemini/skills/nx-import/references/VITE.md",
-        "hash": "5723130412353202318"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": "prisma.config.ts",
-        "hash": "455749580409383361"
-      },
-      {
-        "file": ".gemini/settings.json",
-        "hash": "5921792102792576356"
-      },
-      {
-        "file": ".github/skills/nx-import/references/TURBOREPO.md",
-        "hash": "6654032474246573297"
-      },
-      {
-        "file": ".opencode/skills/nx-import/references/TURBOREPO.md",
-        "hash": "6654032474246573297"
-      },
-      {
-        "file": ".cursor/skills/nx-workspace/SKILL.md",
-        "hash": "14445122489349943565"
-      },
-      {
-        "file": ".github/skills/nx-run-tasks/SKILL.md",
-        "hash": "10723914446406921246"
-      },
-      {
-        "file": ".cursor/commands/monitor-ci.md",
-        "hash": "14525640332969739716"
-      },
-      {
-        "file": ".github/skills/monitor-ci/SKILL.md",
-        "hash": "11715232867929533564"
-      },
-      {
-        "file": ".github/skills/monitor-ci/scripts/ci-state-update.mjs",
-        "hash": "13401974159889364904"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "7566486974516458802"
-      },
-      {
-        "file": "dist/apps/api/assets/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "AGENTS.md",
-        "hash": "3693179293707062853"
-      },
-      {
-        "file": ".cursor/skills/nx-workspace/references/AFFECTED.md",
-        "hash": "10577828056523124002"
-      },
-      {
-        "file": ".cursor/skills/nx-import/references/JEST.md",
-        "hash": "8022966628634571060"
-      },
-      {
-        "file": "nx.json",
-        "hash": "17823846112955123784"
-      },
-      {
-        "file": ".cursor/skills/nx-import/references/TURBOREPO.md",
-        "hash": "6654032474246573297"
-      },
-      {
-        "file": ".github/skills/nx-import/references/GRADLE.md",
-        "hash": "15868511153961490698"
-      },
-      {
-        "file": ".gemini/skills/nx-plugins/skill.md",
-        "hash": "4717624081372438208"
-      },
-      {
-        "file": ".claude/settings.json",
-        "hash": "4174402289047638020"
-      },
-      {
-        "file": "nx",
-        "hash": "8108031838021157773"
-      },
-      {
-        "file": "opencode.json",
-        "hash": "16592868722877903603"
-      },
-      {
-        "file": "prisma/migrations/20260311220152_init/migration.sql",
-        "hash": "1159632710449972214"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "12926286793420397906"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "14257791690237050036"
-      },
-      {
-        "file": ".codex/agents/ci-monitor-subagent.toml",
-        "hash": "4478062226442413400"
-      },
-      {
-        "file": ".gemini/skills/nx-workspace/references/AFFECTED.md",
-        "hash": "10577828056523124002"
-      },
-      {
-        "file": ".opencode/skills/nx-import/references/GRADLE.md",
-        "hash": "15868511153961490698"
-      },
-      {
-        "file": ".cursor/skills/nx-plugins/SKILL.md",
-        "hash": "4717624081372438208"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "11911801181309274062"
-      },
-      {
-        "file": ".nx/nxw.js",
-        "hash": "11301648124127104610"
-      },
-      {
-        "file": ".github/skills/link-workspace-packages/SKILL.md",
-        "hash": "6638592300654417978"
-      },
-      {
-        "file": "docker-compose.yaml",
-        "hash": "1312739131614988313"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "5407418692668764289"
-      },
-      {
-        "file": ".opencode/skills/nx-plugins/SKILL.md",
-        "hash": "4717624081372438208"
-      },
-      {
-        "file": ".codex/config.toml",
-        "hash": "8338542331931050556"
-      },
-      {
-        "file": ".opencode/skills/nx-generate/SKILL.md",
-        "hash": "16801959272346088877"
-      },
-      {
-        "file": ".cursor/skills/monitor-ci/SKILL.md",
-        "hash": "11715232867929533564"
-      },
-      {
-        "file": ".github/skills/nx-workspace/references/AFFECTED.md",
-        "hash": "10577828056523124002"
-      },
-      {
-        "file": ".cursor/skills/nx-generate/SKILL.md",
-        "hash": "16801959272346088877"
-      },
-      {
-        "file": "dist/apps/api/package.json",
-        "hash": "9827605260510063878"
-      },
-      {
-        "file": ".cursor/skills/nx-import/SKILL.md",
-        "hash": "12834437391178304444"
-      },
-      {
-        "file": ".github/skills/nx-import/references/JEST.md",
-        "hash": "8022966628634571060"
-      },
-      {
-        "file": ".cursor/skills/monitor-ci/scripts/ci-state-update.mjs",
-        "hash": "13401974159889364904"
-      },
-      {
-        "file": ".gemini/skills/monitor-ci/skill.md",
-        "hash": "11715232867929533564"
-      },
-      {
-        "file": ".opencode/skills/nx-import/references/VITE.md",
-        "hash": "5723130412353202318"
-      },
-      {
-        "file": ".cursor/skills/nx-import/references/VITE.md",
-        "hash": "5723130412353202318"
-      },
-      {
-        "file": ".gemini/skills/nx-import/references/JEST.md",
-        "hash": "8022966628634571060"
-      },
-      {
-        "file": "dist/apps/api/package-lock.json",
-        "hash": "5607898436131255615"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "9162784232841663608"
-      },
-      {
-        "file": ".github/skills/nx-plugins/SKILL.md",
-        "hash": "4717624081372438208"
-      },
-      {
-        "file": ".gemini/skills/nx-generate/skill.md",
-        "hash": "16801959272346088877"
-      },
-      {
-        "file": ".opencode/skills/monitor-ci/scripts/ci-state-update.mjs",
-        "hash": "13401974159889364904"
-      },
-      {
-        "file": ".opencode/skills/monitor-ci/references/fix-flows.md",
-        "hash": "14499115380699629375"
-      },
-      {
-        "file": "package.json",
-        "hash": "4080326103024717339"
-      },
-      {
-        "file": ".opencode/commands/monitor-ci.md",
-        "hash": "5545009328452820446"
-      },
-      {
-        "file": ".opencode/skills/nx-workspace/references/AFFECTED.md",
-        "hash": "10577828056523124002"
-      },
-      {
-        "file": "CLAUDE.md",
-        "hash": "3693179293707062853"
-      },
-      {
-        "file": ".cursor/skills/link-workspace-packages/SKILL.md",
-        "hash": "6638592300654417978"
-      },
-      {
-        "file": ".github/prompts/monitor-ci.prompt.md",
-        "hash": "413285597027524757"
-      },
-      {
-        "file": ".cursor/skills/monitor-ci/scripts/ci-poll-decide.mjs",
-        "hash": "8235481637071944834"
-      },
-      {
-        "file": ".gemini/skills/nx-import/references/NEXT.md",
-        "hash": "2570972841475183216"
-      },
-      {
-        "file": "dist/apps/api/main.js",
-        "hash": "7913141845267586823"
-      },
-      {
-        "file": ".opencode/skills/nx-import/SKILL.md",
-        "hash": "12834437391178304444"
-      },
-      {
-        "file": ".cursor/skills/nx-run-tasks/SKILL.md",
-        "hash": "10723914446406921246"
-      },
-      {
-        "file": ".opencode/skills/link-workspace-packages/SKILL.md",
-        "hash": "6638592300654417978"
-      },
-      {
-        "file": ".opencode/agents/ci-monitor-subagent.md",
-        "hash": "6611362967399008889"
-      },
-      {
-        "file": ".github/skills/nx-generate/SKILL.md",
-        "hash": "16801959272346088877"
-      },
-      {
-        "file": ".cursor/skills/nx-import/references/NEXT.md",
-        "hash": "2570972841475183216"
-      },
-      {
-        "file": ".gemini/skills/nx-import/references/TURBOREPO.md",
-        "hash": "6654032474246573297"
-      },
-      {
-        "file": ".github/agents/ci-monitor-subagent.agent.md",
-        "hash": "6573591679819005545"
-      },
-      {
-        "file": ".gemini/skills/nx-run-tasks/skill.md",
-        "hash": "10723914446406921246"
-      },
-      {
-        "file": ".gemini/skills/monitor-ci/scripts/ci-poll-decide.mjs",
-        "hash": "8235481637071944834"
-      },
-      {
-        "file": ".github/skills/monitor-ci/scripts/ci-poll-decide.mjs",
-        "hash": "8235481637071944834"
-      },
-      {
-        "file": "nx.bat",
-        "hash": "16119536321561623970"
-      },
-      {
-        "file": "dist/apps/api/main.js.map",
-        "hash": "4627101104448750863"
-      },
-      {
-        "file": ".opencode/skills/nx-run-tasks/SKILL.md",
-        "hash": "10723914446406921246"
-      },
-      {
-        "file": ".cursor/skills/nx-import/references/GRADLE.md",
-        "hash": "15868511153961490698"
-      },
-      {
-        "file": ".cursor/skills/monitor-ci/references/fix-flows.md",
-        "hash": "14499115380699629375"
-      },
-      {
-        "file": ".github/skills/nx-import/references/VITE.md",
-        "hash": "5723130412353202318"
-      },
-      {
-        "file": ".env",
-        "hash": "2979434498718559718"
-      },
-      {
-        "file": ".gemini/skills/link-workspace-packages/skill.md",
-        "hash": "6638592300654417978"
-      },
-      {
-        "file": ".opencode/skills/nx-import/references/JEST.md",
-        "hash": "8022966628634571060"
-      },
-      {
-        "file": ".gemini/skills/nx-import/skill.md",
-        "hash": "12834437391178304444"
-      },
-      {
-        "file": "prisma/schema.prisma",
-        "hash": "7390985759538673046"
-      },
-      {
-        "file": ".opencode/skills/nx-workspace/SKILL.md",
-        "hash": "14445122489349943565"
-      },
-      {
-        "file": ".github/skills/nx-import/SKILL.md",
-        "hash": "12834437391178304444"
-      },
-      {
-        "file": ".github/skills/nx-import/references/NEXT.md",
-        "hash": "2570972841475183216"
-      },
-      {
-        "file": ".gemini/skills/monitor-ci/scripts/ci-state-update.mjs",
-        "hash": "13401974159889364904"
-      },
-      {
-        "file": ".gemini/commands/monitor-ci.toml",
-        "hash": "2823048782242981098"
-      },
-      {
-        "file": "prisma/migrations/migration_lock.toml",
-        "hash": "872437952673290735"
-      },
-      {
-        "file": ".cursor/agents/ci-monitor-subagent.md",
-        "hash": "14869577228457002810"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "17554676857246940898"
-      },
-      {
-        "file": ".gemini/skills/nx-workspace/skill.md",
-        "hash": "14445122489349943565"
-      }
-    ],
     "projectFileMap": {
       "api-e2e": [
         {
@@ -491,6 +81,126 @@
         {
           "file": "apps/api-e2e/tsconfig.spec.json",
           "hash": "14954872453723519891"
+        }
+      ],
+      "api": [
+        {
+          "file": "apps/api/eslint.config.mjs",
+          "hash": "2624537849564014525"
+        },
+        {
+          "file": "apps/api/project.json",
+          "hash": "13322359023798934256"
+        },
+        {
+          "file": "apps/api/src/app/ads/ads.controller.ts",
+          "hash": "8445802379233757040",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@prisma/client"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/ads/ads.module.ts",
+          "hash": "5073535874514981114",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/ads/ads.service.ts",
+          "hash": "4275033544010888284",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@prisma/client"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/ads/dto/create-ad.dto.ts",
+          "hash": "13541246291583451572",
+          "deps": [
+            "npm:class-transformer",
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/ads/dto/update-ad.dto.ts",
+          "hash": "18308159296541001123",
+          "deps": [
+            "npm:@nestjs/mapped-types"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/app.controller.ts",
+          "hash": "3749671397630262329",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/app.module.ts",
+          "hash": "17092711312169589868",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/app.service.ts",
+          "hash": "2920303273157247352",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/dto/create-project.dto.ts",
+          "hash": "4155228061730657786"
+        },
+        {
+          "file": "apps/api/src/app/dto/index.ts",
+          "hash": "4963443903137309624"
+        },
+        {
+          "file": "apps/api/src/app/prisma.module.ts",
+          "hash": "14427405244334510214",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/app/prisma.service.ts",
+          "hash": "17901223808911134154",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@prisma/client",
+            "npm:@prisma/adapter-pg"
+          ]
+        },
+        {
+          "file": "apps/api/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api/src/main.ts",
+          "hash": "16529021987889135400",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core"
+          ]
+        },
+        {
+          "file": "apps/api/tsconfig.app.json",
+          "hash": "14721380886453079150"
+        },
+        {
+          "file": "apps/api/tsconfig.json",
+          "hash": "3025378044812449119"
+        },
+        {
+          "file": "apps/api/webpack.config.js",
+          "hash": "5823274778110364646",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
         }
       ],
       "frontend": [
@@ -617,82 +327,162 @@
           "file": "apps/frontend-e2e/tsconfig.json",
           "hash": "15726545290547512047"
         }
-      ],
-      "api": [
-        {
-          "file": "apps/api/eslint.config.mjs",
-          "hash": "2624537849564014525"
-        },
-        {
-          "file": "apps/api/project.json",
-          "hash": "13322359023798934256"
-        },
-        {
-          "file": "apps/api/src/app/app.controller.ts",
-          "hash": "10899876196840217978",
-          "deps": [
-            "npm:@nestjs/common"
-          ]
-        },
-        {
-          "file": "apps/api/src/app/app.module.ts",
-          "hash": "3053211398376247444",
-          "deps": [
-            "npm:@nestjs/common"
-          ]
-        },
-        {
-          "file": "apps/api/src/app/app.service.ts",
-          "hash": "15463745070835869325",
-          "deps": [
-            "npm:@nestjs/common"
-          ]
-        },
-        {
-          "file": "apps/api/src/app/dto/create-project.dto.ts",
-          "hash": "4155228061730657786"
-        },
-        {
-          "file": "apps/api/src/app/dto/index.ts",
-          "hash": "4963443903137309624"
-        },
-        {
-          "file": "apps/api/src/app/prisma.service.ts",
-          "hash": "10284175279577520621",
-          "deps": [
-            "npm:@nestjs/common",
-            "npm:@prisma/adapter-pg"
-          ]
-        },
-        {
-          "file": "apps/api/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/api/src/main.ts",
-          "hash": "14244403322143362372",
-          "deps": [
-            "npm:@nestjs/common",
-            "npm:@nestjs/core"
-          ]
-        },
-        {
-          "file": "apps/api/tsconfig.app.json",
-          "hash": "14721380886453079150"
-        },
-        {
-          "file": "apps/api/tsconfig.json",
-          "hash": "3025378044812449119"
-        },
-        {
-          "file": "apps/api/webpack.config.js",
-          "hash": "5823274778110364646",
-          "deps": [
-            "npm:@nx/webpack"
-          ]
-        }
       ]
-    }
+    },
+    "nonProjectFiles": [
+      {
+        "file": ".github/agents/ci-monitor-subagent.agent.md",
+        "hash": "6573591679819005545"
+      },
+      {
+        "file": ".github/prompts/monitor-ci.prompt.md",
+        "hash": "413285597027524757"
+      },
+      {
+        "file": ".github/skills/link-workspace-packages/SKILL.md",
+        "hash": "6638592300654417978"
+      },
+      {
+        "file": ".github/skills/monitor-ci/SKILL.md",
+        "hash": "11715232867929533564"
+      },
+      {
+        "file": ".github/skills/monitor-ci/references/fix-flows.md",
+        "hash": "14499115380699629375"
+      },
+      {
+        "file": ".github/skills/monitor-ci/scripts/ci-poll-decide.mjs",
+        "hash": "8235481637071944834"
+      },
+      {
+        "file": ".github/skills/monitor-ci/scripts/ci-state-update.mjs",
+        "hash": "13401974159889364904"
+      },
+      {
+        "file": ".github/skills/nx-generate/SKILL.md",
+        "hash": "16801959272346088877"
+      },
+      {
+        "file": ".github/skills/nx-import/SKILL.md",
+        "hash": "12834437391178304444"
+      },
+      {
+        "file": ".github/skills/nx-import/references/GRADLE.md",
+        "hash": "15868511153961490698"
+      },
+      {
+        "file": ".github/skills/nx-import/references/JEST.md",
+        "hash": "8022966628634571060"
+      },
+      {
+        "file": ".github/skills/nx-import/references/NEXT.md",
+        "hash": "2570972841475183216"
+      },
+      {
+        "file": ".github/skills/nx-import/references/TURBOREPO.md",
+        "hash": "6654032474246573297"
+      },
+      {
+        "file": ".github/skills/nx-import/references/VITE.md",
+        "hash": "5723130412353202318"
+      },
+      {
+        "file": ".github/skills/nx-plugins/SKILL.md",
+        "hash": "4717624081372438208"
+      },
+      {
+        "file": ".github/skills/nx-run-tasks/SKILL.md",
+        "hash": "10723914446406921246"
+      },
+      {
+        "file": ".github/skills/nx-workspace/SKILL.md",
+        "hash": "14445122489349943565"
+      },
+      {
+        "file": ".github/skills/nx-workspace/references/AFFECTED.md",
+        "hash": "10577828056523124002"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6660206559395848851"
+      },
+      {
+        "file": ".nx/nxw.js",
+        "hash": "11301648124127104610"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "5407418692668764289"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "17554676857246940898"
+      },
+      {
+        "file": "AGENTS.md",
+        "hash": "3693179293707062853"
+      },
+      {
+        "file": "CLAUDE.md",
+        "hash": "3693179293707062853"
+      },
+      {
+        "file": "README.md",
+        "hash": "9177325737414525288"
+      },
+      {
+        "file": "docker-compose.yaml",
+        "hash": "1312739131614988313"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "12926286793420397906"
+      },
+      {
+        "file": "nx",
+        "hash": "8108031838021157773"
+      },
+      {
+        "file": "nx.bat",
+        "hash": "16119536321561623970"
+      },
+      {
+        "file": "nx.json",
+        "hash": "17823846112955123784"
+      },
+      {
+        "file": "opencode.json",
+        "hash": "16592868722877903603"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "17680879247542224792"
+      },
+      {
+        "file": "package.json",
+        "hash": "405461648420997059"
+      },
+      {
+        "file": "prisma.config.ts",
+        "hash": "1331356205900686338"
+      },
+      {
+        "file": "prisma/schema.prisma",
+        "hash": "11352310546780193391"
+      },
+      {
+        "file": "prisma/seed.ts",
+        "hash": "920802109579170496"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "7566486974516458802"
+      }
+    ]
   },
-  "externalNodesHash": "10113886225928526724"
+  "externalNodesHash": "3006991544764484018"
 }

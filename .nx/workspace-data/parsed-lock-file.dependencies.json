@@ -5296,16 +5296,6 @@
   },
   {
     "source": "npm:@module-federation/data-prefetch",
-    "target": "npm:react",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/data-prefetch",
-    "target": "npm:react-dom",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/data-prefetch",
     "target": "npm:@module-federation/runtime",
     "type": "static"
   },
@@ -5606,16 +5596,6 @@
   },
   {
     "source": "npm:@module-federation/data-prefetch@2.1.0",
-    "target": "npm:react",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/data-prefetch@2.1.0",
-    "target": "npm:react-dom",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/data-prefetch@2.1.0",
     "target": "npm:@module-federation/runtime@2.1.0",
     "type": "static"
   },
@@ -5836,11 +5816,6 @@
   },
   {
     "source": "npm:@module-federation/rspack@2.1.0",
-    "target": "npm:@rspack/core",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/rspack@2.1.0",
     "target": "npm:typescript",
     "type": "static"
   },
@@ -5942,11 +5917,6 @@
   {
     "source": "npm:@module-federation/webpack-bundler-runtime@2.1.0",
     "target": "npm:@module-federation/sdk@2.1.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/rspack",
-    "target": "npm:@rspack/core",
     "type": "static"
   },
   {
@@ -6166,6 +6136,16 @@
   },
   {
     "source": "npm:@nestjs/common",
+    "target": "npm:class-transformer",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/common",
+    "target": "npm:class-validator",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/common",
     "target": "npm:reflect-metadata",
     "type": "static"
   },
@@ -6247,6 +6227,21 @@
   {
     "source": "npm:@nestjs/core",
     "target": "npm:uid",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/mapped-types",
+    "target": "npm:@nestjs/common",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/mapped-types",
+    "target": "npm:class-transformer",
+    "type": "static"
+  },
+  {
+    "source": "npm:@nestjs/mapped-types",
+    "target": "npm:reflect-metadata",
     "type": "static"
   },
   {
@@ -8900,21 +8895,6 @@
     "type": "static"
   },
   {
-    "source": "npm:@prisma/studio-core",
-    "target": "npm:@types/react",
-    "type": "static"
-  },
-  {
-    "source": "npm:@prisma/studio-core",
-    "target": "npm:react",
-    "type": "static"
-  },
-  {
-    "source": "npm:@prisma/studio-core",
-    "target": "npm:react-dom",
-    "type": "static"
-  },
-  {
     "source": "npm:@rolldown/binding-wasm32-wasi",
     "target": "npm:@napi-rs/wasm-runtime@1.1.1",
     "type": "static"
@@ -8932,131 +8912,6 @@
   {
     "source": "npm:@napi-rs/wasm-runtime@1.1.1",
     "target": "npm:@tybys/wasm-util",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding",
-    "target": "npm:@rspack/binding-darwin-arm64",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding",
-    "target": "npm:@rspack/binding-darwin-x64",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding",
-    "target": "npm:@rspack/binding-linux-arm64-gnu",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding",
-    "target": "npm:@rspack/binding-linux-arm64-musl",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding",
-    "target": "npm:@rspack/binding-linux-x64-gnu",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding",
-    "target": "npm:@rspack/binding-linux-x64-musl",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding",
-    "target": "npm:@rspack/binding-wasm32-wasi",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding",
-    "target": "npm:@rspack/binding-win32-arm64-msvc",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding",
-    "target": "npm:@rspack/binding-win32-ia32-msvc",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding",
-    "target": "npm:@rspack/binding-win32-x64-msvc",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/binding-wasm32-wasi",
-    "target": "npm:@napi-rs/wasm-runtime",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/core",
-    "target": "npm:@swc/helpers",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/core",
-    "target": "npm:@module-federation/runtime-tools@0.22.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/core",
-    "target": "npm:@rspack/binding",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/core",
-    "target": "npm:@rspack/lite-tapable",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/runtime@0.22.0",
-    "target": "npm:@module-federation/error-codes@0.22.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/runtime@0.22.0",
-    "target": "npm:@module-federation/runtime-core@0.22.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/runtime@0.22.0",
-    "target": "npm:@module-federation/sdk@0.22.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/runtime-core@0.22.0",
-    "target": "npm:@module-federation/error-codes@0.22.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/runtime-core@0.22.0",
-    "target": "npm:@module-federation/sdk@0.22.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/runtime-tools@0.22.0",
-    "target": "npm:@module-federation/runtime@0.22.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/runtime-tools@0.22.0",
-    "target": "npm:@module-federation/webpack-bundler-runtime@0.22.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/webpack-bundler-runtime@0.22.0",
-    "target": "npm:@module-federation/runtime@0.22.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@module-federation/webpack-bundler-runtime@0.22.0",
-    "target": "npm:@module-federation/sdk@0.22.0",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/dev-server",
-    "target": "npm:@rspack/core",
     "type": "static"
   },
   {
@@ -9277,11 +9132,6 @@
   {
     "source": "npm:readdirp@3.6.0",
     "target": "npm:picomatch@2.3.1",
-    "type": "static"
-  },
-  {
-    "source": "npm:@rspack/plugin-react-refresh",
-    "target": "npm:react-refresh",
     "type": "static"
   },
   {
@@ -9732,11 +9582,6 @@
   {
     "source": "npm:@types/pg",
     "target": "npm:pg-types",
-    "type": "static"
-  },
-  {
-    "source": "npm:@types/react",
-    "target": "npm:csstype",
     "type": "static"
   },
   {
@@ -11300,6 +11145,21 @@
     "type": "static"
   },
   {
+    "source": "npm:class-validator",
+    "target": "npm:@types/validator",
+    "type": "static"
+  },
+  {
+    "source": "npm:class-validator",
+    "target": "npm:libphonenumber-js",
+    "type": "static"
+  },
+  {
+    "source": "npm:class-validator",
+    "target": "npm:validator",
+    "type": "static"
+  },
+  {
     "source": "npm:cli-cursor",
     "target": "npm:restore-cursor",
     "type": "static"
@@ -11612,11 +11472,6 @@
   {
     "source": "npm:css-declaration-sorter",
     "target": "npm:postcss",
-    "type": "static"
-  },
-  {
-    "source": "npm:css-loader",
-    "target": "npm:@rspack/core",
     "type": "static"
   },
   {
@@ -17281,11 +17136,6 @@
   },
   {
     "source": "npm:postcss-loader",
-    "target": "npm:@rspack/core",
-    "type": "static"
-  },
-  {
-    "source": "npm:postcss-loader",
     "target": "npm:postcss",
     "type": "static"
   },
@@ -17810,16 +17660,6 @@
     "type": "static"
   },
   {
-    "source": "npm:react-dom",
-    "target": "npm:react",
-    "type": "static"
-  },
-  {
-    "source": "npm:react-dom",
-    "target": "npm:scheduler",
-    "type": "static"
-  },
-  {
     "source": "npm:read-cache",
     "target": "npm:pify",
     "type": "static"
@@ -18327,11 +18167,6 @@
   {
     "source": "npm:supports-color@8.1.1",
     "target": "npm:has-flag",
-    "type": "static"
-  },
-  {
-    "source": "npm:sass-loader",
-    "target": "npm:@rspack/core",
     "type": "static"
   },
   {
@@ -19247,11 +19082,6 @@
   {
     "source": "npm:ts-api-utils",
     "target": "npm:typescript",
-    "type": "static"
-  },
-  {
-    "source": "npm:ts-checker-rspack-plugin",
-    "target": "npm:@rspack/core",
     "type": "static"
   },
   {
