@@ -1,0 +1,56 @@
+<section class="mx-auto max-w-6xl px-4 py-8">
+  <header class="mb-8 flex items-baseline justify-between gap-4">
+    <div>
+      <h1 class="text-2xl font-semibold text-slate-900">Latest ads</h1>
+      <p class="mt-1 text-sm text-slate-500">
+        Browse the most recent listings posted on the marketplace.
+      </p>
+    </div>
+  </header>
+
+  @if (ads(); as adsList) {
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        @for (ad of adsList; track ad.id) {
+          <article
+            class="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          >
+            <header class="mb-3 flex items-start justify-between gap-2">
+              <h2 class="line-clamp-2 text-base font-semibold text-slate-900">
+                {{ ad.title }}
+              </h2>
+              <p class="text-right text-sm font-semibold text-indigo-600">
+                {{ ad.price | currency: ad.currency ?? 'USD':'symbol':'1.0-0' }}
+              </p>
+            </header>
+
+            <p class="mb-3 line-clamp-3 text-sm text-slate-600">
+              {{ ad.description }}
+            </p>
+
+            <div class="mt-auto flex items-center justify-between gap-2 pt-3 text-xs">
+              <span class="inline-flex items-center gap-1 rounded-full bg-slate-50 px-2 py-1 font-medium text-slate-600">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                {{ ad.category?.name ?? 'Uncategorized' }}
+              </span>
+
+              <span class="inline-flex items-center gap-1 text-slate-500">
+                <span class="material-symbols-outlined text-base">location_on</span>
+                <span>{{ ad.location }}</span>
+              </span>
+            </div>
+          </article>
+        }
+        @empty {
+          <p class="text-sm text-slate-500">
+            There are no ads yet. Check back soon!
+          </p>
+        }
+      </div>
+  } @else {
+    <div class="flex items-center justify-center py-12">
+      <span class="h-5 w-5 animate-spin rounded-full border-2 border-indigo-500 border-t-transparent"></span>
+      <span class="ml-3 text-sm text-slate-500">Loading ads…</span>
+    </div>
+  }
+</section>
+

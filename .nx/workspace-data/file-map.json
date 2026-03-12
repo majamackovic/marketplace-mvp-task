@@ -83,6 +83,39 @@
           "hash": "14954872453723519891"
         }
       ],
+      "frontend-e2e": [
+        {
+          "file": "apps/frontend-e2e/eslint.config.mjs",
+          "hash": "1172734138943286526",
+          "deps": [
+            "npm:eslint-plugin-playwright"
+          ]
+        },
+        {
+          "file": "apps/frontend-e2e/playwright.config.ts",
+          "hash": "4535250053304126287",
+          "deps": [
+            "npm:@playwright/test",
+            "npm:@nx/playwright",
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "apps/frontend-e2e/project.json",
+          "hash": "2827390866139710423"
+        },
+        {
+          "file": "apps/frontend-e2e/src/example.spec.ts",
+          "hash": "16019101014373124625",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/frontend-e2e/tsconfig.json",
+          "hash": "15726545290547512047"
+        }
+      ],
       "api": [
         {
           "file": "apps/api/eslint.config.mjs",
@@ -94,7 +127,7 @@
         },
         {
           "file": "apps/api/src/app/ads/ads.controller.ts",
-          "hash": "8445802379233757040",
+          "hash": "12230342174172856440",
           "deps": [
             "npm:@nestjs/common",
             "npm:@prisma/client"
@@ -102,14 +135,14 @@
         },
         {
           "file": "apps/api/src/app/ads/ads.module.ts",
-          "hash": "5073535874514981114",
+          "hash": "12338927519643157080",
           "deps": [
             "npm:@nestjs/common"
           ]
         },
         {
           "file": "apps/api/src/app/ads/ads.service.ts",
-          "hash": "4275033544010888284",
+          "hash": "10845160026586620509",
           "deps": [
             "npm:@nestjs/common",
             "npm:@prisma/client"
@@ -117,7 +150,7 @@
         },
         {
           "file": "apps/api/src/app/ads/dto/create-ad.dto.ts",
-          "hash": "13541246291583451572",
+          "hash": "6229105936571528420",
           "deps": [
             "npm:class-transformer",
             "npm:class-validator"
@@ -125,14 +158,14 @@
         },
         {
           "file": "apps/api/src/app/ads/dto/update-ad.dto.ts",
-          "hash": "18308159296541001123",
+          "hash": "10375190495992874176",
           "deps": [
             "npm:@nestjs/mapped-types"
           ]
         },
         {
           "file": "apps/api/src/app/app.controller.ts",
-          "hash": "3749671397630262329",
+          "hash": "11693189110201978551",
           "deps": [
             "npm:@nestjs/common"
           ]
@@ -161,7 +194,7 @@
         },
         {
           "file": "apps/api/src/app/prisma.module.ts",
-          "hash": "14427405244334510214",
+          "hash": "10698808516542012913",
           "deps": [
             "npm:@nestjs/common"
           ]
@@ -181,7 +214,7 @@
         },
         {
           "file": "apps/api/src/main.ts",
-          "hash": "16529021987889135400",
+          "hash": "6642879018726634030",
           "deps": [
             "npm:@nestjs/common",
             "npm:@nestjs/core"
@@ -238,7 +271,7 @@
         },
         {
           "file": "apps/frontend/src/app/app.routes.ts",
-          "hash": "6185150965714414910",
+          "hash": "2028275626651973965",
           "deps": [
             "npm:@angular/router"
           ]
@@ -256,9 +289,38 @@
           ]
         },
         {
+          "file": "apps/frontend/src/app/clients/ads.client.ts",
+          "hash": "12320211011419926459",
+          "deps": [
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
           "file": "apps/frontend/src/app/clients/hello.client.ts",
           "hash": "12240789205349758725",
           "deps": [
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/app/features/ads/ads-list.component.html",
+          "hash": "11874911219877299450"
+        },
+        {
+          "file": "apps/frontend/src/app/features/ads/ads-list.component.ts",
+          "hash": "3740831588873806582",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/app/features/ads/ads.service.ts",
+          "hash": "7522993248855793827",
+          "deps": [
+            "npm:@angular/core",
             "npm:@angular/common",
             "npm:rxjs"
           ]
@@ -284,7 +346,14 @@
         },
         {
           "file": "apps/frontend/src/styles.scss",
-          "hash": "5195668842064076916"
+          "hash": "17788899824995975898"
+        },
+        {
+          "file": "apps/frontend/tailwind.config.js",
+          "hash": "4616538962241029475",
+          "deps": [
+            "npm:@nx/angular"
+          ]
         },
         {
           "file": "apps/frontend/tsconfig.app.json",
@@ -293,39 +362,6 @@
         {
           "file": "apps/frontend/tsconfig.json",
           "hash": "4516499123136711707"
-        }
-      ],
-      "frontend-e2e": [
-        {
-          "file": "apps/frontend-e2e/eslint.config.mjs",
-          "hash": "1172734138943286526",
-          "deps": [
-            "npm:eslint-plugin-playwright"
-          ]
-        },
-        {
-          "file": "apps/frontend-e2e/playwright.config.ts",
-          "hash": "4535250053304126287",
-          "deps": [
-            "npm:@playwright/test",
-            "npm:@nx/playwright",
-            "npm:@nx/devkit"
-          ]
-        },
-        {
-          "file": "apps/frontend-e2e/project.json",
-          "hash": "2827390866139710423"
-        },
-        {
-          "file": "apps/frontend-e2e/src/example.spec.ts",
-          "hash": "16019101014373124625",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/frontend-e2e/tsconfig.json",
-          "hash": "15726545290547512047"
         }
       ]
     },
@@ -432,7 +468,7 @@
       },
       {
         "file": "README.md",
-        "hash": "9177325737414525288"
+        "hash": "17272086772692509411"
       },
       {
         "file": "docker-compose.yaml",
@@ -460,15 +496,15 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "17680879247542224792"
+        "hash": "11977026402563309665"
       },
       {
         "file": "package.json",
-        "hash": "405461648420997059"
+        "hash": "17039989623753400854"
       },
       {
         "file": "prisma.config.ts",
-        "hash": "1331356205900686338"
+        "hash": "15801207915122189374"
       },
       {
         "file": "prisma/schema.prisma",
@@ -484,5 +520,5 @@
       }
     ]
   },
-  "externalNodesHash": "3006991544764484018"
+  "externalNodesHash": "6893071547387169271"
 }
