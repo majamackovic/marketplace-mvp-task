@@ -1,0 +1,26 @@
+Daemon process terminated and closed the connection
+
+Messages from the log:
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:57.198Z - Received json message of type HASH_MULTI_GLOB
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:57.206Z - Serializing response for HASH_GLOB message in json mode
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:57.207Z - Responding to HASH_GLOB message
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:57.207Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:57.208Z - Done responding to the client handleHashMultiGlob
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:57.208Z - Handled json message HASH_GLOB. Handling time: 8. Response time: 2.
+Time for 'GLOB round trip' 163.02512399999978
+Time for 'deserialize daemon response - GLOB' 0.1737199999997756
+Time for 'daemon-message-serialization-HASH_MULTI_GLOB' 0.08952599999975064
+[NX v22.5.4 Daemon Client] - 2026-03-12T14:24:57.208Z - [Messenger] Received message, length: 114
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:57.221Z - Closed a connection. Number of open connections: 4
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:57.222Z - Closed a connection. Number of open connections: 3
+Time for 'HASH_MULTI_GLOB round trip' 12.413152999999966
+Time for 'deserialize daemon response - HASH_MULTI_GLOB' 0.08962900000005902
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:58.555Z - [WATCHER]: Processing file changes in outputs
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:58.557Z - [WATCHER]: .gitignore was modified
+[NX v22.5.4 Daemon Client] - 2026-03-12T14:24:58.557Z - [ProjectGraphListener] Starting reconnection for 1 callbacks
+[NX v22.5.4 Daemon Client] - 2026-03-12T14:24:58.558Z - [Client] Waiting for server (max: 6000 attempts, 10ms interval)
+[NX v22.5.4 Daemon Server] - 2026-03-12T14:24:58.558Z - [SYNC]: clearing sync generators cache due to file changes
+
+
+
+More information: /home/maja/test-project/.nx/workspace-data/d/daemon.log
