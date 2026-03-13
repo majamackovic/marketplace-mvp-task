@@ -22,6 +22,16 @@ export interface Ad {
   updatedAt: string;
 }
 
+export interface CreateAdRequest {
+  title: string;
+  description: string;
+  price: number;
+  currency?: string;
+  location: string;
+  categoryId: string;
+  authorId: string;
+}
+
 const API_BASE = '/api';
 
 @Injectable({
@@ -33,5 +43,9 @@ export class AdsClient {
   getAds(): Observable<Ad[]> {
     return this.http.get<Ad[]>(`${API_BASE}/ads`);
   }
-}
 
+  createAd(payload: CreateAdRequest): Observable<Ad> {
+    payload.authorId = 'cmmnqempa00040ktd88ingsrb';
+    return this.http.post<Ad>(`${API_BASE}/ads`, payload);
+  }
+}

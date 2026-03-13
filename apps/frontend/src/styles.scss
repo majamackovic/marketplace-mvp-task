@@ -3,3 +3,36 @@
 @tailwind utilities;
 
 /* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+.toast-container {
+  @apply z-[100] !important;
+}
+
+.ngx-toastr {
+  @apply rounded-2xl shadow-xl border px-5 py-4 text-sm font-medium !important;
+  background-image: none !important;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.toast-success {
+  @apply bg-emerald-50 border-emerald-200 text-emerald-900 !important;
+}
+
+.toast-error {
+  @apply bg-rose-50 border-rose-200 text-rose-900 !important;
+}
+
+.toast-progress {
+  @apply opacity-100 !important;
+}
+
+.toast-success .toast-progress {
+  @apply bg-emerald-500 !important;
+}
+
+.toast-error .toast-progress {
+  @apply bg-rose-500 !important;
+}

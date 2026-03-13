@@ -11,6 +11,7 @@ export class AdsService {
   async findAll(): Promise<Ad[]> {
     return this.prismaService.prisma.ad.findMany({
       include: { category: true },
+      orderBy: { createdAt: 'desc' },
     });
   }
 
@@ -27,7 +28,7 @@ export class AdsService {
     return ad;
   }
 
-  async create(data: CreateAdDto): Promise<Ad> {
+  async create(data: CreateAdDto & { authorId: string }): Promise<Ad> {
     return this.prismaService.prisma.ad.create({
       data,
       include: { category: true },

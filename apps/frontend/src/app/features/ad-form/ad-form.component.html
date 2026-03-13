@@ -1,0 +1,277 @@
+<div
+  class="min-h-screen bg-slate-50 flex items-center justify-center px-4 py-10"
+>
+  <div class="w-full max-w-xl">
+    <div
+      class="bg-white rounded-2xl shadow-md border border-slate-100 px-6 py-6 sm:px-8 sm:py-8"
+    >
+      <div class="flex items-center justify-between mb-6">
+        <button
+          type="button"
+          (click)="handleCancel()"
+          class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+        >
+          <span class="fas fa-arrow-left mr-1.5 text-slate-400"></span>
+          Back to list
+        </button>
+
+        <h1 class="text-lg sm:text-xl font-semibold text-slate-900">
+          Create a new ad
+        </h1>
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="handleSubmit()" class="space-y-5">
+        <!-- Title -->
+        <div>
+          <label
+            for="title"
+            class="block text-sm font-medium text-slate-700 mb-1"
+          >
+            Title
+          </label>
+          <div
+            class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm transition ease-out focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500"
+            [class.border-slate-200]="
+              !form.get('title')?.invalid || !form.get('title')?.touched
+            "
+            [class.border-red-500]="
+              form.get('title')?.invalid && form.get('title')?.touched
+            "
+            [class.focus-within:ring-red-500]="
+              form.get('title')?.invalid && form.get('title')?.touched
+            "
+          >
+            <input
+              id="title"
+              type="text"
+              formControlName="title"
+              class="w-full border-none bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-0"
+              placeholder="e.g. Like new iPhone 15 Pro, 128GB"
+            />
+          </div>
+          @if (getErrorMessage('title'); as error) {
+            <p class="mt-1 text-xs text-red-500">
+              {{ error }}
+            </p>
+          }
+        </div>
+
+        <!-- Location -->
+        <div>
+          <label
+            for="location"
+            class="block text-sm font-medium text-slate-700 mb-1"
+          >
+            Location
+          </label>
+          <div
+            class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm transition ease-out focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500"
+            [class.border-slate-200]="
+              !form.get('location')?.invalid || !form.get('location')?.touched
+            "
+            [class.border-red-500]="
+              form.get('location')?.invalid && form.get('location')?.touched
+            "
+            [class.focus-within:ring-red-500]="
+              form.get('location')?.invalid && form.get('location')?.touched
+            "
+          >
+            <input
+              id="location"
+              type="text"
+              formControlName="location"
+              class="w-full border-none bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-0"
+              placeholder="e.g. Belgrade, Novi Sad..."
+            />
+          </div>
+          @if (getErrorMessage('location'); as error) {
+            <p class="mt-1 text-xs text-red-500">
+              {{ error }}
+            </p>
+          }
+        </div>
+
+        <!-- Description -->
+        <div>
+          <label
+            for="description"
+            class="block text-sm font-medium text-slate-700 mb-1"
+          >
+            Description
+          </label>
+          <div
+            class="rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm transition ease-out focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500"
+            [class.border-slate-200]="
+              !form.get('description')?.invalid ||
+              !form.get('description')?.touched
+            "
+            [class.border-red-500]="
+              form.get('description')?.invalid &&
+              form.get('description')?.touched
+            "
+            [class.focus-within:ring-red-500]="
+              form.get('description')?.invalid &&
+              form.get('description')?.touched
+            "
+          >
+            <textarea
+              id="description"
+              rows="4"
+              formControlName="description"
+              class="w-full resize-none border-none bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-0"
+              placeholder="Describe the item, its condition, and anything a buyer should know."
+            ></textarea>
+          </div>
+          @if (getErrorMessage('description'); as error) {
+            <p class="mt-1 text-xs text-red-500">
+              {{ error }}
+            </p>
+          }
+        </div>
+
+        <!-- Price & Currency -->
+        <div class="grid grid-cols-3 gap-3">
+          <div class="col-span-2">
+            <label
+              for="price"
+              class="block text-sm font-medium text-slate-700 mb-1"
+            >
+              Price
+            </label>
+            <div
+              class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm transition ease-out focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500"
+              [class.border-slate-200]="
+                !form.get('price')?.invalid || !form.get('price')?.touched
+              "
+              [class.border-red-500]="
+                form.get('price')?.invalid && form.get('price')?.touched
+              "
+              [class.focus-within:ring-red-500]="
+                form.get('price')?.invalid && form.get('price')?.touched
+              "
+            >
+              <input
+                id="price"
+                type="number"
+                inputmode="decimal"
+                min="1"
+                formControlName="price"
+                class="w-full border-none bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                placeholder="Enter price"
+              />
+            </div>
+            @if (getErrorMessage('price'); as error) {
+              <p class="mt-1 text-xs text-red-500">
+                {{ error }}
+              </p>
+            }
+          </div>
+
+          <div>
+            <label
+              for="currency"
+              class="block text-sm font-medium text-slate-700 mb-1"
+            >
+              Currency
+            </label>
+            <div
+              class="rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm transition ease-out focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500"
+              [class.border-slate-200]="
+                !form.get('currency')?.invalid || !form.get('currency')?.touched
+              "
+              [class.border-red-500]="
+                form.get('currency')?.invalid && form.get('currency')?.touched
+              "
+              [class.focus-within:ring-red-500]="
+                form.get('currency')?.invalid && form.get('currency')?.touched
+              "
+            >
+              <select
+                id="currency"
+                formControlName="currency"
+                class="w-full border-none bg-transparent text-sm text-slate-900 focus:outline-none focus:ring-0"
+              >
+                <option value="RSD">RSD</option>
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category -->
+        <div>
+          <label
+            for="categoryId"
+            class="block text-sm font-medium text-slate-700 mb-1"
+          >
+            Category
+          </label>
+          <div
+            class="rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm transition ease-out focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500"
+            [class.border-slate-200]="
+              !form.get('categoryId')?.invalid ||
+              !form.get('categoryId')?.touched
+            "
+            [class.border-red-500]="
+              form.get('categoryId')?.invalid && form.get('categoryId')?.touched
+            "
+            [class.focus-within:ring-red-500]="
+              form.get('categoryId')?.invalid && form.get('categoryId')?.touched
+            "
+          >
+            <select
+              id="categoryId"
+              formControlName="categoryId"
+              class="w-full border-none bg-transparent text-sm text-slate-900 focus:outline-none focus:ring-0"
+            >
+              @if (categories().length === 0) {
+                <option value="" disabled selected>
+                  Loading categories...
+                </option>
+              } @else {
+                <option value="" disabled>Select a category</option>
+                @for (cat of categories(); track cat.id) {
+                  <option [value]="cat.id">
+                    {{ cat.name }}
+                  </option>
+                }
+              }
+            </select>
+          </div>
+          @if (getErrorMessage('categoryId'); as error) {
+            <p class="mt-1 text-xs text-red-500">
+              {{ error }}
+            </p>
+          }
+        </div>
+
+        <!-- Actions -->
+        <div class="pt-2 flex flex-col gap-3">
+          <button
+            type="submit"
+            [disabled]="form.invalid || isSubmitting()"
+            class="inline-flex w-full items-center justify-center rounded-full border border-transparent bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-600"
+          >
+            @if (isSubmitting()) {
+              <span
+                class="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"
+              ></span>
+              Creating ad...
+            } @else {
+              Create & Publish
+            }
+          </button>
+
+          <button
+            type="button"
+            (click)="handleCancel()"
+            class="inline-flex w-full items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -8,8 +8,13 @@ import {
   Param,
   Patch,
   Post,
+  Req,
+  UseGuards,
 } from '@nestjs/common';
 import { Ad } from '@prisma/client';
+import { Request } from 'express';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { AuthUser } from '../auth/jwt.strategy';
 import { AdsService } from './ads.service';
 import { CreateAdDto } from './dto/create-ad.dto';
 import { UpdateAdDto } from './dto/update-ad.dto';
@@ -29,8 +34,12 @@ export class AdsController {
   }
 
   @Post()
-  async create(@Body() dto: CreateAdDto): Promise<Ad> {
-    return this.adsService.create(dto);
+  @UseGuards(JwtAuthGuard)
+  async create(
+    @Body() dto: CreateAdDto,
+    @Req() req: Request & { user: AuthUser },
+  ): Promise<Ad> {
+    return this.adsService.create({ ...dto, authorId: req.user.userId });
   }
 
   @Patch(':id')

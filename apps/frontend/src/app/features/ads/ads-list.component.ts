@@ -1,15 +1,22 @@
 import { Component, Signal, computed, inject, signal } from '@angular/core';
 import { CommonModule, CurrencyPipe, NgOptimizedImage } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { AdsService } from './ads.service';
+import { AdsService } from '../../services/ads.service';
 import { Ad } from '../../clients/ads.client';
 import { CategoriesClient, Category } from '../../clients/categories.client';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-ads-list',
   standalone: true,
-  imports: [CommonModule, CurrencyPipe, NgOptimizedImage, OverlayModule],
+  imports: [
+    CommonModule,
+    CurrencyPipe,
+    NgOptimizedImage,
+    OverlayModule,
+    RouterModule,
+  ],
   templateUrl: './ads-list.component.html',
 })
 export class AdsListComponent {
@@ -71,10 +78,8 @@ export class AdsListComponent {
   }
 
   toggleCategory(id: string) {
-    this.selectedCategories.update(current => 
-      current.includes(id) 
-        ? current.filter(c => c !== id) 
-        : [...current, id]
+    this.selectedCategories.update((current) =>
+      current.includes(id) ? current.filter((c) => c !== id) : [...current, id],
     );
   }
 
@@ -83,4 +88,3 @@ export class AdsListComponent {
     this.selectedCategories.set([]);
   }
 }
-

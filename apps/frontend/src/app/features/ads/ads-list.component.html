@@ -1,87 +1,102 @@
-<section class="mx-auto max-w-6xl px-4 py-8">
-  <header class="sticky top-0 z-10 mb-6 border-b border-slate-100 bg-white/80 pb-4 backdrop-blur">
-    <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-      <div>
-        <h1 class="text-2xl font-semibold text-slate-900">Latest ads</h1>
-        <p class="mt-1 text-sm text-slate-500">
-          Browse the most recent listings posted on the marketplace.
-        </p>
-      </div>
+<div class="flex flex-col gap-4 mx-auto max-w-6xl p-4">
+  <!-- Sticky filter bar with search + categories -->
+  <div class="sticky top-0 z-10 -mx-4 bg-white/80 backdrop-blur">
+    <div class="flex flex-col gap-2 md:flex-row md:items-center justify-center">
+      <!-- Search first -->
+      <label
+        class="flex w-full items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm transition ease-out focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500 hover:-translate-y-0.5 hover:shadow-md md:max-w-xl"
+      >
+        <span class="fas fa-search text-slate-400"></span>
+        <input
+          type="text"
+          class="w-full border-none bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-0"
+          placeholder="Search by title or description"
+          [value]="searchQuery()"
+          (input)="handleSearch($event)"
+        />
+      </label>
 
-      <div class="flex flex-col gap-3 md:flex-row md:items-center">
-        <label class="flex w-full items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500 md:w-64">
-          <span class="material-symbols-outlined text-slate-400">search</span>
-          <input
-            type="text"
-            class="w-full border-none bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-0"
-            placeholder="Search by title or description"
-            [value]="searchQuery()"
-            (input)="handleSearch($event)"
-          />
-        </label>
-
-        <div class="flex flex-1 items-center gap-2">
-          <label
-            class="text-xs font-medium uppercase tracking-wide text-slate-500"
-            for="categoryFilter"
+      <!-- Categories next to search -->
+      <div class="flex items-center gap-2">
+        <button
+          type="button"
+          cdkOverlayOrigin
+          #trigger="cdkOverlayOrigin"
+          (click)="isDropdownOpen.set(!isDropdownOpen())"
+          class="flex items-center gap-2 rounded-full border border-slate-200 bg-gray-50 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+        >
+          <span class="fas fa-list text-slate-400"></span>
+          <span>Categories</span>
+          @if (selectedCategories().length > 0) {
+            <span
+              class="rounded-full bg-blue-600 px-2 py-0.5 text-xs text-white"
+            >
+              {{ selectedCategories().length }}
+            </span>
+          }
+          <i
+            class="text-xs transition-transform"
+            [class.rotate-180]="isDropdownOpen()"
+            ><span class="fas fa-chevron-down text-slate-400"></span
+          ></i>
+        </button>
+        <ng-template
+          cdkConnectedOverlay
+          [cdkConnectedOverlayOrigin]="trigger"
+          [cdkConnectedOverlayOpen]="isDropdownOpen()"
+          [cdkConnectedOverlayHasBackdrop]="true"
+          cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
+          (backdropClick)="isDropdownOpen.set(false)"
+        >
+          <div
+            class="mt-2 flex max-h-[300px] min-w-[220px] flex-col gap-1 overflow-y-auto rounded-xl border bg-white p-3 shadow-2xl"
           >
-            Categories
-          </label>
-          <button 
-            type="button"
-            cdkOverlayOrigin 
-            #trigger="cdkOverlayOrigin"
-            (click)="isDropdownOpen.set(!isDropdownOpen())"
-            class="px-4 py-2 border rounded-lg bg-gray-50 hover:bg-gray-100 flex items-center gap-2 transition"
-          >
-            <span>Categories</span>
-            @if (selectedCategories().length > 0) {
-              <span class="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full">
-                {{ selectedCategories().length }}
-              </span>
+            <p class="mb-1 px-2 text-[10px] font-bold uppercase text-gray-400">
+              Izaberi kategorije
+            </p>
+            @for (cat of categories(); track cat.id) {
+              <label
+                class="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 transition hover:bg-blue-50"
+              >
+                <input
+                  type="checkbox"
+                  [checked]="selectedCategories().includes(cat.id)"
+                  (change)="toggleCategory(cat.id)"
+                  class="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                />
+                <span class="text-sm text-gray-700">{{ cat.name }}</span>
+              </label>
             }
-            <i class="text-xs transition-transform" [class.rotate-180]="isDropdownOpen()">▼</i>
-          </button>
-          <ng-template
-            cdkConnectedOverlay
-            [cdkConnectedOverlayOrigin]="trigger"
-            [cdkConnectedOverlayOpen]="isDropdownOpen()"
-            [cdkConnectedOverlayHasBackdrop]="true"
-            cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
-            (backdropClick)="isDropdownOpen.set(false)"
-          >
-            <div class="bg-white shadow-2xl border rounded-xl p-3 mt-2 min-w-[220px] max-h-[300px] overflow-y-auto flex flex-col gap-1">
-              <p class="text-[10px] font-bold text-gray-400 uppercase px-2 mb-1">Izaberi kategorije</p>
-              @for (cat of categories(); track cat.id) {
-                <label class="flex items-center gap-3 px-3 py-2 hover:bg-blue-50 rounded-lg cursor-pointer transition">
-                  <input 
-                    type="checkbox" 
-                    [checked]="selectedCategories().includes(cat.id)"
-                    (change)="toggleCategory(cat.id)"
-                    class="w-4 h-4 rounded text-blue-600 focus:ring-blue-500"
-                  />
-                  <span class="text-sm text-gray-700">{{ cat.name }}</span>
-                </label>
-              }
-            </div>
-          </ng-template>
-        </div>
+          </div>
+        </ng-template>
       </div>
     </div>
-  </header>
+  </div>
+
+  <div class="border-b border-slate-100 w-full h-px"></div>
+
+  <!-- Title below sticky filters -->
+  <div class="flex flex-col gap-2 px-4">
+    <h1 class="text-2xl font-semibold text-slate-900">Latest ads</h1>
+    <p class="mt-1 text-sm text-slate-500">
+      Browse the most recent listings posted on the marketplace.
+    </p>
+  </div>
 
   @if (ads(); as allAds) {
-    <div class="mt-4 grid grid-cols-1 gap-6 md:grid-cols-3">
+    <div class="mt-2 grid grid-cols-1 gap-6 md:grid-cols-3 px-4">
       @for (ad of filteredAds(); track ad.id) {
         <article
-          class="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          class="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md cursor-pointer"
         >
           <header class="mb-3 flex items-start justify-between gap-2">
             <h2 class="line-clamp-2 text-base font-semibold text-slate-900">
               {{ ad.title }}
             </h2>
             <p class="text-right text-sm font-semibold text-indigo-600">
-              {{ ad.price | currency: ad.currency ?? 'USD':'symbol':'1.0-0' }}
+              {{
+                ad.price | currency: ad.currency ?? 'USD' : 'symbol' : '1.0-0'
+              }}
             </p>
           </header>
 
@@ -89,29 +104,35 @@
             {{ ad.description }}
           </p>
 
-          <div class="mt-auto flex items-center justify-between gap-2 pt-3 text-xs">
-            <span class="inline-flex items-center gap-1 rounded-full bg-slate-50 px-2 py-1 font-medium text-slate-600">
+          <div
+            class="mt-auto flex items-center justify-between gap-2 pt-3 text-xs"
+          >
+            <span
+              class="inline-flex items-center gap-1 rounded-full bg-slate-50 px-2 py-1 font-medium text-slate-600"
+            >
               <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-              {{ ad.category.name ?? 'Uncategorized' }}
+              {{ ad.category.name || 'Uncategorized' }}
             </span>
 
             <span class="inline-flex items-center gap-1 text-slate-500">
-              <span class="material-symbols-outlined text-base">location_on</span>
+              <span class="fas fa-location-dot text-slate-500"></span>
               <span>{{ ad.location }}</span>
             </span>
           </div>
         </article>
-      }
-      @empty {
+      } @empty {
         <p class="col-span-full text-sm text-slate-500">
-          There are no ads matching your filters. Try adjusting your search or categories.
+          There are no ads matching your filters. Try adjusting your search or
+          categories.
         </p>
       }
     </div>
   } @else {
     <div class="flex items-center justify-center py-12">
-      <span class="h-5 w-5 animate-spin rounded-full border-2 border-indigo-500 border-t-transparent"></span>
+      <span
+        class="h-5 w-5 animate-spin rounded-full border-2 border-indigo-500 border-t-transparent"
+      ></span>
       <span class="ml-3 text-sm text-slate-500">Loading ads…</span>
     </div>
   }
-</section>
+</div>

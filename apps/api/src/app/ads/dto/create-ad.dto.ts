@@ -36,8 +36,4 @@ export class CreateAdDto {
   @IsString()
   @IsNotEmpty()
   categoryId: string;
-
-  @IsString()
-  @IsNotEmpty()
-  authorId: string;
 }
