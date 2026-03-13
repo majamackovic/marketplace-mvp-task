@@ -531,6 +531,60 @@
         "hash": "sha512-Zn5uXdcFNIA1+1Ei5McRd+iRzfhENPCe7LeABkJtNulSxjma+l7ltNx55BWZkRlwRnpOgHqxnjyaDgJnNXnqzg=="
       }
     },
+    "npm:@angular/cdk": {
+      "type": "npm",
+      "name": "npm:@angular/cdk",
+      "data": {
+        "version": "21.2.2",
+        "packageName": "@angular/cdk",
+        "hash": "sha512-9AsZkwqy07No7+0qPydcJfXB6SpA9qLDBanoesNj5KsiZJ62PJH3oIjVyNeQEEe1HQWmSwBnhwN12OPLNMUlnw=="
+      }
+    },
+    "npm:entities@6.0.1": {
+      "type": "npm",
+      "name": "npm:entities@6.0.1",
+      "data": {
+        "version": "6.0.1",
+        "packageName": "entities",
+        "hash": "sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g=="
+      }
+    },
+    "npm:entities": {
+      "type": "npm",
+      "name": "npm:entities",
+      "data": {
+        "version": "4.5.0",
+        "packageName": "entities",
+        "hash": "sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw=="
+      }
+    },
+    "npm:entities@7.0.1": {
+      "type": "npm",
+      "name": "npm:entities@7.0.1",
+      "data": {
+        "version": "7.0.1",
+        "packageName": "entities",
+        "hash": "sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA=="
+      }
+    },
+    "npm:parse5@8.0.0": {
+      "type": "npm",
+      "name": "npm:parse5@8.0.0",
+      "data": {
+        "version": "8.0.0",
+        "packageName": "parse5",
+        "hash": "sha512-9m4m5GSgXjL4AjumKzq1Fgfp3Z8rsvjRNbnkVwfu2ImRqE5D0LnY2QfDen18FSY9C573YU5XxSapdHZTZ2WolA=="
+      }
+    },
+    "npm:parse5": {
+      "type": "npm",
+      "name": "npm:parse5",
+      "data": {
+        "version": "4.0.0",
+        "packageName": "parse5",
+        "hash": "sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA=="
+      }
+    },
     "npm:@angular/cli": {
       "type": "npm",
       "name": "npm:@angular/cli",
@@ -9153,33 +9207,6 @@
         "hash": "sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg=="
       }
     },
-    "npm:entities": {
-      "type": "npm",
-      "name": "npm:entities",
-      "data": {
-        "version": "4.5.0",
-        "packageName": "entities",
-        "hash": "sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw=="
-      }
-    },
-    "npm:entities@7.0.1": {
-      "type": "npm",
-      "name": "npm:entities@7.0.1",
-      "data": {
-        "version": "7.0.1",
-        "packageName": "entities",
-        "hash": "sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA=="
-      }
-    },
-    "npm:entities@6.0.1": {
-      "type": "npm",
-      "name": "npm:entities@6.0.1",
-      "data": {
-        "version": "6.0.1",
-        "packageName": "entities",
-        "hash": "sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g=="
-      }
-    },
     "npm:env-paths": {
       "type": "npm",
       "name": "npm:env-paths",
@@ -12537,24 +12564,6 @@
         "hash": "sha512-1Y1A//QUXEZK7YKz+rD9WydcE1+EuPr6ZBgKecAB8tmoW6UFv0NREVJe1p+jRxtThkcbbKkfwIbWJe/IeE6m2Q=="
       }
     },
-    "npm:parse5": {
-      "type": "npm",
-      "name": "npm:parse5",
-      "data": {
-        "version": "4.0.0",
-        "packageName": "parse5",
-        "hash": "sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA=="
-      }
-    },
-    "npm:parse5@8.0.0": {
-      "type": "npm",
-      "name": "npm:parse5@8.0.0",
-      "data": {
-        "version": "8.0.0",
-        "packageName": "parse5",
-        "hash": "sha512-9m4m5GSgXjL4AjumKzq1Fgfp3Z8rsvjRNbnkVwfu2ImRqE5D0LnY2QfDen18FSY9C573YU5XxSapdHZTZ2WolA=="
-      }
-    },
     "npm:parse5-html-rewriting-stream": {
       "type": "npm",
       "name": "npm:parse5-html-rewriting-stream",
@@ -15351,6 +15360,9 @@
     "node_modules/@angular/build/node_modules/source-map-support": "npm:source-map-support@0.5.21",
     "node_modules/@angular/build/node_modules/vite": "npm:vite@7.3.0",
     "node_modules/@angular/build/node_modules/watchpack": "npm:watchpack@2.5.0",
+    "node_modules/@angular/cdk": "npm:@angular/cdk",
+    "node_modules/@angular/cdk/node_modules/entities": "npm:entities@6.0.1",
+    "node_modules/@angular/cdk/node_modules/parse5": "npm:parse5@8.0.0",
     "node_modules/@angular/cli": "npm:@angular/cli",
     "node_modules/@angular/cli/node_modules/ansi-regex": "npm:ansi-regex@6.2.2",
     "node_modules/@angular/cli/node_modules/ansi-styles": "npm:ansi-styles@6.2.3",

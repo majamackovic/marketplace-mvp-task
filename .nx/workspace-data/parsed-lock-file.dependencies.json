@@ -870,6 +870,41 @@
     "type": "static"
   },
   {
+    "source": "npm:@angular/cdk",
+    "target": "npm:@angular/common",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/cdk",
+    "target": "npm:@angular/core",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/cdk",
+    "target": "npm:@angular/platform-browser",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/cdk",
+    "target": "npm:rxjs",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/cdk",
+    "target": "npm:parse5@8.0.0",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/cdk",
+    "target": "npm:tslib",
+    "type": "static"
+  },
+  {
+    "source": "npm:parse5@8.0.0",
+    "target": "npm:entities@6.0.1",
+    "type": "static"
+  },
+  {
     "source": "npm:@angular/cli",
     "target": "npm:@angular-devkit/architect",
     "type": "static"

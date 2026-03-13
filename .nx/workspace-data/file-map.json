@@ -207,7 +207,7 @@
         },
         {
           "file": "apps/frontend/src/app/app.html",
-          "hash": "17816966185630879015"
+          "hash": "12381848755543232021"
         },
         {
           "file": "apps/frontend/src/app/app.routes.ts",
@@ -222,7 +222,7 @@
         },
         {
           "file": "apps/frontend/src/app/app.ts",
-          "hash": "11833690593705296219",
+          "hash": "7121363935224697027",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router"
@@ -256,14 +256,15 @@
         },
         {
           "file": "apps/frontend/src/app/features/ads/ads-list.component.html",
-          "hash": "8896361269029544268"
+          "hash": "13236666782733960540"
         },
         {
           "file": "apps/frontend/src/app/features/ads/ads-list.component.ts",
-          "hash": "16303052582506525584",
+          "hash": "10271264066187938423",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common"
+            "npm:@angular/common",
+            "npm:@angular/cdk"
           ]
         },
         {
@@ -272,6 +273,18 @@
           "deps": [
             "npm:@angular/core",
             "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/app/header/header.component.html",
+          "hash": "8272838610931047216"
+        },
+        {
+          "file": "apps/frontend/src/app/header/header.component.ts",
+          "hash": "18359187387962190760",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
           ]
         },
         {
@@ -528,11 +541,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "11977026402563309665"
+        "hash": "16925596910981869561"
       },
       {
         "file": "package.json",
-        "hash": "17039989623753400854"
+        "hash": "12485743222154843892"
       },
       {
         "file": "prisma.config.ts",
@@ -552,5 +565,5 @@
       }
     ]
   },
-  "externalNodesHash": "6893071547387169271"
+  "externalNodesHash": "11883339942524831498"
 }
