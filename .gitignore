@@ -1,8 +1,5 @@
 # Nx & Angular
-.nx/installation
-.nx/cache
-.nx/workspace-data
-.nx/polygraph
+.nx/
 .angular/
 
 # Prisma
