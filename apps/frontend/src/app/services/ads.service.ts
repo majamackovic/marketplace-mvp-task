@@ -28,6 +28,10 @@ export class AdsService {
       });
   }
 
+  getAdById(id: string): Observable<Ad> {
+    return this.adsClient.getAdById(id);
+  }
+
   createAd(payload: CreateAdRequest): Observable<Ad> {
     return this.adsClient.createAd(payload).pipe(
       tap((created) => {

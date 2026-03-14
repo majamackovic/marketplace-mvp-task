@@ -1,5 +1,4 @@
 import { ConflictException, Injectable, UnauthorizedException } from '@nestjs/common';
-import { User } from '@prisma/client';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { PrismaService } from '../prisma.service';
@@ -10,8 +9,10 @@ import { RegisterDto } from './dto/register.dto';
 export class AuthService {
   constructor(private readonly prismaService: PrismaService, private readonly jwtService: JwtService) {}
 
-  async register(data: RegisterDto): Promise<Omit<User, 'password'>> {
-    const { email, password, name } = data;
+  async register(
+    data: RegisterDto,
+  ): Promise<{ access_token: string; user: { id: string; email: string; name?: string | null; phone?: string | null } }> {
+    const { email, password, name, phone } = data;
 
     const existingUser = await this.prismaService.prisma.user.findUnique({
       where: { email },
@@ -27,17 +28,28 @@ export class AuthService {
       data: {
         email,
         name,
+        phone,
         password: hashedPassword,
       },
     });
 
-    // Exclude password from the returned user object
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { password: _password, ...userWithoutPassword } = user;
-    return userWithoutPassword;
+    const payload = { sub: user.id, email: user.email };
+    const access_token = await this.jwtService.signAsync(payload);
+
+    return {
+      access_token,
+      user: {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        phone: user.phone,
+      },
+    };
   }
 
-  async login(data: LoginDto): Promise<{ access_token: string; user: { id: string; email: string; name?: string | null } }> {
+  async login(
+    data: LoginDto,
+  ): Promise<{ access_token: string; user: { id: string; email: string; name?: string | null; phone?: string | null } }> {
     const { email, password } = data;
 
     const user = await this.prismaService.prisma.user.findUnique({
@@ -63,6 +75,7 @@ export class AuthService {
         id: user.id,
         email: user.email,
         name: user.name,
+        phone: user.phone,
       },
     };
   }

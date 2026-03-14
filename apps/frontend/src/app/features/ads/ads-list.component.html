@@ -1,15 +1,15 @@
-<div class="flex flex-col gap-4 mx-auto max-w-6xl p-4">
+<div class="flex min-h-0 flex-1 flex-col gap-4 pt-6 px-6 bg-slate-50">
   <!-- Sticky filter bar with search + categories -->
-  <div class="sticky top-0 z-10 -mx-4 bg-white/80 backdrop-blur">
+  <div class="sticky top-0 z-10 bg-slate-50 backdrop-blur">
     <div class="flex flex-col gap-2 md:flex-row md:items-center justify-center">
       <!-- Search first -->
       <label
-        class="flex w-full items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm transition ease-out focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500 hover:-translate-y-0.5 hover:shadow-md md:max-w-xl"
+        class="flex w-full items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm transition ease-out focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500 hover:-translate-y-0.5 hover:shadow-md"
       >
         <span class="fas fa-search text-slate-400"></span>
         <input
           type="text"
-          class="w-full border-none bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-0"
+          class="w-full border-none bg-white text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-0"
           placeholder="Search by title or description"
           [value]="searchQuery()"
           (input)="handleSearch($event)"
@@ -23,10 +23,10 @@
           cdkOverlayOrigin
           #trigger="cdkOverlayOrigin"
           (click)="isDropdownOpen.set(!isDropdownOpen())"
-          class="flex items-center gap-2 rounded-full border border-slate-200 bg-gray-50 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+          class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
         >
           <span class="fas fa-list text-slate-400"></span>
-          <span>Categories</span>
+          <span>Kategorije</span>
           @if (selectedCategories().length > 0) {
             <span
               class="rounded-full bg-blue-600 px-2 py-0.5 text-xs text-white"
@@ -75,64 +75,67 @@
 
   <div class="border-b border-slate-100 w-full h-px"></div>
 
-  <!-- Title below sticky filters -->
-  <div class="flex flex-col gap-2 px-4">
-    <h1 class="text-2xl font-semibold text-slate-900">Latest ads</h1>
-    <p class="mt-1 text-sm text-slate-500">
-      Browse the most recent listings posted on the marketplace.
-    </p>
-  </div>
-
-  @if (ads(); as allAds) {
-    <div class="mt-2 grid grid-cols-1 gap-6 md:grid-cols-3 px-4">
-      @for (ad of filteredAds(); track ad.id) {
-        <article
-          class="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md cursor-pointer"
-        >
-          <header class="mb-3 flex items-start justify-between gap-2">
-            <h2 class="line-clamp-2 text-base font-semibold text-slate-900">
-              {{ ad.title }}
-            </h2>
-            <p class="text-right text-sm font-semibold text-indigo-600">
-              {{
-                ad.price | currency: ad.currency ?? 'USD' : 'symbol' : '1.0-0'
-              }}
-            </p>
-          </header>
-
-          <p class="mb-3 line-clamp-3 text-sm text-slate-600">
-            {{ ad.description }}
-          </p>
-
-          <div
-            class="mt-auto flex items-center justify-between gap-2 pt-3 text-xs"
+  <div class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto pb-6">
+    <!-- Title below sticky filters -->
+    <div class="flex flex-col gap-2 px-4">
+      <h1 class="text-2xl font-semibold text-slate-900">Najnoviji oglasi</h1>
+      <p class="mt-1 text-sm text-slate-500">
+        Pregledaj najnovije oglase na Marketplace-u.
+      </p>
+    </div>
+  
+    @if (ads(); as allAds) {
+      <div class="mt-2 grid grid-cols-1 gap-6 md:grid-cols-3 px-4">
+        @for (ad of filteredAds(); track ad.id) {
+          <article
+            [routerLink]="['/ads', ad.id]"
+            class="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md cursor-pointer"
           >
-            <span
-              class="inline-flex items-center gap-1 rounded-full bg-slate-50 px-2 py-1 font-medium text-slate-600"
+            <header class="mb-3 flex items-start justify-between gap-2">
+              <h2 class="line-clamp-2 text-base font-semibold text-slate-900">
+                {{ ad.title }}
+              </h2>
+              <p class="text-right text-sm font-semibold text-indigo-600">
+                {{
+                  ad.price | currency: ad.currency ?? 'USD' : 'symbol' : '1.0-0'
+                }}
+              </p>
+            </header>
+  
+            <p class="mb-3 line-clamp-3 text-sm text-slate-600">
+              {{ ad.description }}
+            </p>
+  
+            <div
+              class="mt-auto flex items-center justify-between gap-2 pt-3 text-xs"
             >
-              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-              {{ ad.category.name || 'Uncategorized' }}
-            </span>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-slate-50 px-2 py-1 font-medium text-slate-600"
+              >
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                {{ ad.category.name || 'Uncategorized' }}
+              </span>
+  
+              <span class="inline-flex items-center gap-1 text-slate-500">
+                <span class="fas fa-location-dot text-slate-500"></span>
+                <span>{{ ad.location }}</span>
+              </span>
+            </div>
+          </article>
+        } @empty {
+          <p class="col-span-full text-sm text-slate-500">
+            Nema oglasa koji odgovaraju vašoj pretrazi. Pokušajte prilagoditi vašu pretragu.
+          </p>
+        }
+      </div>
+    } @else {
+      <div class="flex items-center justify-center py-12">
+        <span
+          class="h-5 w-5 animate-spin rounded-full border-2 border-indigo-500 border-t-transparent"
+        ></span>
+        <span class="ml-3 text-sm text-slate-500">Učitavanje oglasa…</span>
+      </div>
+    }
 
-            <span class="inline-flex items-center gap-1 text-slate-500">
-              <span class="fas fa-location-dot text-slate-500"></span>
-              <span>{{ ad.location }}</span>
-            </span>
-          </div>
-        </article>
-      } @empty {
-        <p class="col-span-full text-sm text-slate-500">
-          There are no ads matching your filters. Try adjusting your search or
-          categories.
-        </p>
-      }
-    </div>
-  } @else {
-    <div class="flex items-center justify-center py-12">
-      <span
-        class="h-5 w-5 animate-spin rounded-full border-2 border-indigo-500 border-t-transparent"
-      ></span>
-      <span class="ml-3 text-sm text-slate-500">Loading ads…</span>
-    </div>
-  }
+  </div>
 </div>

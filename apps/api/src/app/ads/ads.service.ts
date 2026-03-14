@@ -15,10 +15,15 @@ export class AdsService {
     });
   }
 
-  async findOne(id: string): Promise<Ad> {
+  async findOne(id: string) {
     const ad = await this.prismaService.prisma.ad.findUnique({
       where: { id },
-      include: { category: true },
+      include: {
+        category: true,
+        author: {
+          select: { name: true, phone: true },
+        },
+      },
     });
 
     if (!ad) {

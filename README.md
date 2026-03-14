@@ -13,28 +13,28 @@ To build a functional MVP (Minimum Viable Product) of a marketplace platform ins
 - **AHA Principle (Avoid Hasty Abstractions):** Prioritizing code readability and speed. Avoiding premature abstractions and complex patterns (like overly shared modules) until a clear need arises.
 - **Data-First Approach:** Establishing a robust Database Schema (Prisma) as the foundation, ensuring it dictates the API structure and Frontend requirements.
 - **Signals-Driven UI:** Leveraging Angular Signals for efficient state management, ensuring high performance and reactivity with minimal boilerplate.
-- **AI-Assisted Velocity:** Using Cursor and Claude as "sparring partners" for rapid prototyping, refactoring, and generating high-quality boilerplate code.
+- **AI-Assisted Velocity:** Using Cursor and Gemini as "sparring partners" for rapid prototyping, refactoring, and generating high-quality boilerplate code.
 
-## Development Roadmap
+🛠️ Project Roadmap & Progress
+Phase 1: Foundation & Infrastructure
+[x] Monorepo Setup: Workspace orchestration with Nx, Angular, and NestJS.
+[x] Persistence Layer: Database schema design with Prisma ORM (Ads, Users, Categories).
+[x] Environment: Standardized development with Docker and .env configuration.
+[x] Data Seeding: Automated database seeding for rapid development and testing.
 
-- Phase 1: Foundation
-- [ x ] Setting up environment (Docker, Angular, NestJS)
-- [ x ] repository setup and initial commit, gitignore edit
-- [ x ] defining Prisma schema with MVP tables (Ads, Categories, Users, Images)
-- [ x ] Seeding database with realistic data for development and testing
+Phase 2: Backend Core (API & Security)
+[x] Ads & Categories CRUD: Robust API endpoints with DTO validation (class-validator).
+[x] Authentication System: Secure JWT implementation with Passport strategies and bcrypt hashing.
+[x] Database Connectivity: Optimized PostgreSQL integration and error handling.
+[x] CORS & Security: Configured cross-origin resource sharing and protected routes via Guards.
 
-- Phase 2: Backend Core (NestJS & Prisma)
-- [ x ] Created AdsModule with full CRUD functionality
-- [ x ] Implemented CreateAdDto and UpdateAdDto for request validation
-- [ x ] Integrated class-validator and class-transformer for robust data handling
-- [ x ] Resolved database connectivity issues with @prisma/adapter-pg
-- [ x ] Enabled CORS for frontend-to-backend communication
-- [ x ] Implemented CategoriesModule (Read-only) for ad categorization
+Phase 3: Frontend Architecture (Modern Angular)
+[x] UI Framework: Integrated Tailwind CSS for responsive, mobile-first design.
+[x] State Management: Fully reactive architecture using Angular Signals.
+[x] Auth Flow: Secure Login/Register flow with Functional Interceptors for token handling.
+[x] Routing & Protection: Implemented Auth Guards to secure private routes and enhance UX.
 
-- Phase 3: Frontend Foundation (Angular & Tailwind)
-- [ x ] Integrated Tailwind CSS for modern and responsive UI
-- [ x ] Configured HttpClient and global app providers
-- [ x ] Created shared AdsClient for API communication
-- [ x ] Implemented AdsListComponent using Angular Signals
-- [ x ] Developed AdsService with RxJS-to-Signal interop (toSignal)
-- [ x ] Built responsive Grid UI for ad listings using modern @for and @if syntax
+🚀 Next Steps
+[ ] Image Upload: Integration with AWS S3 or Cloudinary.
+[ ] Search Engine: Implementing full-text search and advanced filters.
+[ ] Real-time Chat: Messaging system for buyers and sellers using WebSockets.

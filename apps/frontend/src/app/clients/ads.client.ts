@@ -7,6 +7,11 @@ export interface AdCategory {
   name: string;
 }
 
+export interface AdAuthor {
+  name: string | null;
+  phone: string | null;
+}
+
 export interface Ad {
   id: string;
   title: string;
@@ -18,6 +23,7 @@ export interface Ad {
   categoryId: string;
   authorId: string;
   category: AdCategory;
+  author?: AdAuthor;
   createdAt: string;
   updatedAt: string;
 }
@@ -29,7 +35,6 @@ export interface CreateAdRequest {
   currency?: string;
   location: string;
   categoryId: string;
-  authorId: string;
 }
 
 const API_BASE = '/api';
@@ -44,8 +49,11 @@ export class AdsClient {
     return this.http.get<Ad[]>(`${API_BASE}/ads`);
   }
 
+  getAdById(id: string): Observable<Ad> {
+    return this.http.get<Ad>(`${API_BASE}/ads/${id}`);
+  }
+
   createAd(payload: CreateAdRequest): Observable<Ad> {
-    payload.authorId = 'cmmnqempa00040ktd88ingsrb';
     return this.http.post<Ad>(`${API_BASE}/ads`, payload);
   }
 }

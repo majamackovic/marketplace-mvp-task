@@ -1,5 +1,5 @@
 import { Component, Signal, computed, inject, signal } from '@angular/core';
-import { CommonModule, CurrencyPipe, NgOptimizedImage } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { AdsService } from '../../services/ads.service';
 import { Ad } from '../../clients/ads.client';
@@ -10,10 +10,10 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-ads-list',
   standalone: true,
+  host: { class: 'flex min-h-0 flex-1 flex-col' },
   imports: [
     CommonModule,
     CurrencyPipe,
-    NgOptimizedImage,
     OverlayModule,
     RouterModule,
   ],
