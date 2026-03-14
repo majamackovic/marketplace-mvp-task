@@ -53,6 +53,10 @@ Ensure your PostgreSQL instance is running, then execute:
 
 - npx prisma db seed
 
+- If seeder not executing, try:
+
+- set -a && source .env && set +a && npx tsx prisma/seed.ts
+
 ## 🚀 Running the Application
 - Option A: Run All (Recommended)
 - npx nx run-many -t serve

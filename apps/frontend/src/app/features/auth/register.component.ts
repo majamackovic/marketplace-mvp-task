@@ -19,6 +19,7 @@ import { RegisterRequest } from '../../clients/auth.model';
   selector: 'app-register',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, RouterLink],
+  host: { class: 'flex min-h-0 flex-1 flex-col' },
   templateUrl: './register.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
