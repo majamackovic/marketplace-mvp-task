@@ -1,6 +1,6 @@
 import { Route } from '@angular/router';
 import { AdsListComponent } from './features/ads/ads-list.component';
-import { AdDetailsComponent } from './features/ads/ad-details.component';
+import { AdDetailsComponent } from './features/ad-details/ad-details.component';
 import { AdFormComponent } from './features/ad-form/ad-form.component';
 import { LoginComponent } from './features/auth/login.component';
 import { RegisterComponent } from './features/auth/register.component';

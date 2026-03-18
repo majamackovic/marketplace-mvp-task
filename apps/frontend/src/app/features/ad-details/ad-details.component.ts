@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { switchMap, catchError, of } from 'rxjs';
 import { AdsService } from '../../services/ads.service';
-import { Ad } from '../../clients/ads.client';
+import { Ad } from '../../interfaces/ad.model';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -28,3 +28,4 @@ export class AdDetailsComponent {
     { initialValue: undefined }
   );
 }
+

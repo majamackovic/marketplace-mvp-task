@@ -9,6 +9,21 @@ import { RegisterDto } from './dto/register.dto';
 export class AuthService {
   constructor(private readonly prismaService: PrismaService, private readonly jwtService: JwtService) {}
 
+  async me(
+    userId: string,
+  ): Promise<{ id: string; email: string; name?: string | null; phone?: string | null }> {
+    const user = await this.prismaService.prisma.user.findUnique({
+      where: { id: userId },
+      select: { id: true, email: true, name: true, phone: true },
+    });
+
+    if (!user) {
+      throw new UnauthorizedException();
+    }
+
+    return user;
+  }
+
   async register(
     data: RegisterDto,
   ): Promise<{ access_token: string; user: { id: string; email: string; name?: string | null; phone?: string | null } }> {

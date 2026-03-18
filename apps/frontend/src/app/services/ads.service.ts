@@ -1,6 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, Observable, of, tap } from 'rxjs';
-import { Ad, AdsClient, CreateAdRequest } from '../clients/ads.client';
+import { AdsClient } from '../clients/ads.client';
+import { Ad, CreateAdRequest } from '../interfaces';
 
 @Injectable({
   providedIn: 'root',

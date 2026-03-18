@@ -2,8 +2,9 @@ import { Component, Signal, computed, inject, signal } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { AdsService } from '../../services/ads.service';
-import { Ad } from '../../clients/ads.client';
-import { CategoriesClient, Category } from '../../clients/categories.client';
+import { Ad } from '../../interfaces/ad.model';
+import { CategoriesClient } from '../../clients/categories.client';
+import { Category } from '../../interfaces/ad.model';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { RouterModule } from '@angular/router';
 

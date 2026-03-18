@@ -14,14 +14,14 @@ import {
 } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { LoginRequest } from '../../clients/auth.model';
+import { LoginRequest } from '../../interfaces/auth.model';
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './login.component.html',
-  host: { class: 'flex min-h-0 flex-1 flex-col' },
+  host: { class: 'flex min-h-0 flex-1 flex-col overflow-y-auto' },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent {

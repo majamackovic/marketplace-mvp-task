@@ -13,13 +13,13 @@ import {
 } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { RegisterRequest } from '../../clients/auth.model';
+import { RegisterRequest } from '../../interfaces/auth.model';
 
 @Component({
   selector: 'app-register',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, RouterLink],
-  host: { class: 'flex min-h-0 flex-1 flex-col' },
+  host: { class: 'flex min-h-0 flex-1 flex-col overflow-y-auto' },
   templateUrl: './register.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

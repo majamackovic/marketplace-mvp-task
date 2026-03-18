@@ -7,7 +7,9 @@
     <a routerLink="/" class="text-lg font-bold tracking-tight text-blue-600">
       Marketplace.
     </a>
-
+    @if (authService.currentUser()) {
+      <span>Dobrodošli, {{ authService.currentUser()?.name }}</span>
+    }
     <div class="flex items-center gap-3">
       @if (!authService.currentUser()) {
         @if (router.url !== '/login') {
@@ -20,7 +22,6 @@
         }
       }
       @else {
-        <span>Welcome, {{ authService.currentUser()?.name }}</span>
         <a
         (click)="$event.preventDefault(); authService.logout()"
         href="#"

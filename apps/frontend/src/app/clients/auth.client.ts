@@ -5,7 +5,8 @@ import {
   AuthResponse,
   LoginRequest,
   RegisterRequest,
-} from './auth.model';
+  User,
+} from '../interfaces';
 
 const API_BASE = '/api/auth';
 
@@ -21,6 +22,10 @@ export class AuthClient {
 
   login(credentials: LoginRequest): Observable<AuthResponse> {
     return this.http.post<AuthResponse>(`${API_BASE}/login`, credentials);
+  }
+
+  me(): Observable<User> {
+    return this.http.get<User>(`${API_BASE}/me`);
   }
 }
 

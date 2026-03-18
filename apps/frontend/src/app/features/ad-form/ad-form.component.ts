@@ -16,12 +16,14 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AdsService } from '../../services/ads.service';
-import { CategoriesClient, Category } from '../../clients/categories.client';
-import { CreateAdRequest } from '../../clients/ads.client';
+import { CategoriesClient } from '../../clients/categories.client';
+import { Category } from '../../interfaces/ad.model';
+import { CreateAdRequest } from '../../interfaces/ad.model';
 
 @Component({
   selector: 'app-ad-form',
   standalone: true,
+  host: { class: 'flex min-h-0 flex-1 flex-col overflow-y-auto' },
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './ad-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

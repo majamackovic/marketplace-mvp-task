@@ -1,12 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
-export interface Category {
-  id: string;
-  name: string;
-  slug: string;
-}
+import { Category } from '../interfaces';
 
 const API_BASE = '/api';
 
