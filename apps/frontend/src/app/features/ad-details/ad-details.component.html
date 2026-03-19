@@ -64,6 +64,9 @@
               <p class="font-medium text-slate-900">
                 {{ adData.author.name ?? 'N/A' }}
               </p>
+              <p class="font-medium text-slate-900">
+                {{ adData.author.phone ?? '' }}
+              </p>
               @if (adData.author.phone) {
                 <a
                   [attr.href]="'tel:' + adData.author.phone"
