@@ -110,13 +110,13 @@ export class AdFormComponent {
 
     this.adsService.createAd(value).subscribe({
       next: () => {
-        this.toastr.success('Ad created and published successfully!');
+        this.toastr.success('Oglas je uspešno kreiran i objavljen!');
         this.isSubmitting.set(false);
         this.router.navigate(['/']);
       },
       error: (error) => {
         console.error('Failed to create ad', error);
-        this.toastr.error('Error while creating ad. Try again.');
+        this.toastr.error('Greška pri kreiranju oglasa. Pokušajte ponovno.');
         this.isSubmitting.set(false);
       },
     });

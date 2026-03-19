@@ -64,19 +64,19 @@ export class AdsListComponent {
     this.searchQuery.set(target?.value ?? '');
   }
 
-  handleCategoryChange(event: Event): void {
-    const target = event.target as HTMLSelectElement | null;
-    if (!target) {
-      this.selectedCategories.set([]);
-      return;
-    }
+  // handleCategoryChange(event: Event): void {
+  //   const target = event.target as HTMLSelectElement | null;
+  //   if (!target) {
+  //     this.selectedCategories.set([]);
+  //     return;
+  //   }
 
-    const values = Array.from(target.selectedOptions).map(
-      (option) => option.value,
-    );
+  //   const values = Array.from(target.selectedOptions).map(
+  //     (option) => option.value,
+  //   );
 
-    this.selectedCategories.set(values);
-  }
+  //   this.selectedCategories.set(values);
+  // }
 
   toggleCategory(id: string) {
     this.selectedCategories.update((current) =>
@@ -84,8 +84,8 @@ export class AdsListComponent {
     );
   }
 
-  clearFilters() {
-    this.searchQuery.set('');
-    this.selectedCategories.set([]);
-  }
+  // clearFilters() {
+  //   this.searchQuery.set('');
+  //   this.selectedCategories.set([]);
+  // }
 }
